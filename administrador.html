@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Administrador - Sistema de Gestión Ciudadana</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="comun.js" defer></script>
+    <script src="administrador.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <header class="encabezado">
+
+        <div class="logo-header">
+            <img src="logo.png" alt="Logo del sistema">
+        </div>
+
+        <div class="titulo-header">
+            <h1>PANEL ADMINISTRADOR</h1>
+            <p>Sistema de Gestión Ciudadana</p>
+        </div>
+
+    </header>
+
+    <!-- Menú del administrador -->
+    <nav class="navegacion">
+
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#usuarios">Usuarios</a></li>
+            <li><a href="#constancias">Constancias</a></li>
+            <li><a href="#reportes">Reportes</a></li>
+            <li><a href="#avisos">Avisos</a></li>
+        </ul>
+
+    </nav>
+
+    <main>
+
+        <!-- Bienvenida -->
+        <section class="seccion inicio">
+
+            <h2>Bienvenido, Administrador</h2>
+
+            <p class="descripcion">
+                Desde este panel puedes gestionar las solicitudes
+                y reportes de los ciudadanos.
+            </p>
+
+            <button type="button" id="cerrarSesion">
+                CERRAR SESIÓN
+            </button>
+
+        </section>
+
+        <!-- Funciones principales -->
+        <section class="seccion">
+
+            <h2>Funciones del administrador</h2>
+
+            <div class="tarjetas">
+
+                <article class="tarjeta">
+                    <div class="icono-tarjeta">👥</div>
+                    <h3>Usuarios</h3>
+                    <p>Consulta los ciudadanos registrados.</p>
+                    <a href="#usuarios" class="boton-accion">
+                        Gestionar usuarios
+                    </a>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="icono-tarjeta">📄</div>
+                    <h3>Constancias</h3>
+                    <p>Consulta las solicitudes de constancias.</p>
+                    <a href="#constancias" class="boton-accion">
+                        Gestionar constancias
+                    </a>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="icono-tarjeta">💡</div>
+                    <h3>Luminarias</h3>
+                    <p>Revisa los reportes de alumbrado público.</p>
+                    <a href="#luminarias" class="boton-accion">
+                        Ver reportes
+                    </a>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="icono-tarjeta">🚧</div>
+                    <h3>Bacheo</h3>
+                    <p>Consulta los reportes de baches.</p>
+                    <a href="#bacheo" class="boton-accion">
+                        Ver reportes
+                    </a>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Usuarios registrados -->
+        <section id="usuarios" class="seccion">
+
+            <h2>Usuarios registrados</h2>
+
+            <div id="tablaUsuarios">
+                <p>Aún no hay ciudadanos registrados.</p>
+            </div>
+
+        </section>
+
+        <!-- Solicitudes de constancias -->
+        <section id="constancias" class="seccion">
+
+            <h2>Solicitudes de constancias</h2>
+
+            <div id="tablaConstancias">
+                <p>No hay solicitudes registradas.</p>
+            </div>
+
+        </section>
+
+        <!-- Reportes de luminarias -->
+        <section id="luminarias" class="seccion">
+
+            <h2>Reportes de luminarias</h2>
+
+            <div id="tablaLuminarias">
+                <p>No hay reportes de luminarias.</p>
+            </div>
+
+        </section>
+
+        <!-- Reportes de bacheo -->
+        <section id="bacheo" class="seccion">
+
+            <h2>Reportes de bacheo</h2>
+
+            <div id="tablaBacheo">
+                <p>No hay reportes de bacheo.</p>
+            </div>
+
+        </section>
+
+        <!-- Avisos -->
+        <section id="avisos" class="seccion">
+
+            <h2>Avisos comunitarios</h2>
+
+            <p>
+                En este apartado se podrán consultar y administrar
+                los avisos para los ciudadanos.
+            </p>
+
+        </section>
+
+        <!-- Información adicional -->
+        <aside class="aside">
+
+            <h2>Funciones principales</h2>
+
+            <ol>
+                <li>Consultar usuarios registrados.</li>
+                <li>Revisar solicitudes de constancias.</li>
+                <li>Administrar reportes de luminarias.</li>
+                <li>Administrar reportes de bacheo.</li>
+                <li>Actualizar el estado de las solicitudes.</li>
+            </ol>
+
+        </aside>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+
+        <h3>Sistema de Gestión Ciudadana</h3>
+
+        <p>COPACI de Granjas Guadalupe</p>
+
+    </footer>
+
+</body> 
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión Ciudadana</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="comun.js" defer></script>
+    <script src="login.js" defer></script>
+
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <img src="logo.png" alt="Logo del sistema">
+
+        <div>
+            <h1>SISTEMA DE GESTIÓN CIUDADANA</h1>
+            <p>COPACI de Granjas Guadalupe</p>
+        </div>
+    </header>
+
+    <nav class="navegacion">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#usuarios">Usuarios</a></li>
+            <li><a href="#registro">Registro</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section id="inicio" class="seccion-login">
+
+            <div class="login-card">
+
+                <img src="logo.png" alt="Logo" class="logo-login">
+
+                <h2>INICIAR SESIÓN</h2>
+                <p>Ingresa tus datos para continuar</p>
+
+                <form id="loginForm">
+
+                    <label for="tipoUsuario">Ingresar como:</label>
+
+                    <select id="tipoUsuario" required>
+                        <option value="">Selecciona tu tipo de usuario</option>
+                        <option value="ciudadano">Ciudadano</option>
+                        <option value="administrador">Administrador</option>
+                        <option value="copaci">COPACI</option>
+                    </select>
+
+                    <label for="correoLogin">Correo electrónico:</label>
+
+                    <input type="email" id="correoLogin"
+                        placeholder="Ingresa tu correo" required>
+
+                    <label for="passwordLogin">Contraseña:</label>
+
+                    <input type="password" id="passwordLogin"
+                        placeholder="Ingresa tu contraseña" required>
+
+                    <button type="submit">INICIAR SESIÓN</button>
+
+                    <p id="mensajeLogin" class="mensaje"></p>
+
+                </form>
+
+                <p>¿No tienes una cuenta?</p>
+                <a href="#registro">Crear cuenta</a>
+
+            </div>
+
+        </section>
+
+        <section id="registro" class="seccion">
+
+            <div class="login-card">
+
+                <h2>REGISTRO DE CIUDADANOS</h2>
+                <p>Completa tus datos para crear una cuenta.</p>
+
+                <form id="registroForm">
+
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre"
+                        placeholder="Nombre y apellidos" required>
+
+                    <label for="direccion">Dirección o calle:</label>
+                    <input type="text" id="direccion"
+                        placeholder="Ingresa tu dirección" required>
+
+                    <label for="correoRegistro">Correo electrónico:</label>
+                    <input type="email" id="correoRegistro"
+                        placeholder="Ingresa tu correo" required>
+
+                    <label for="passwordRegistro">Contraseña:</label>
+                    <input type="password" id="passwordRegistro"
+                        placeholder="Crea una contraseña" minlength="6" required>
+
+                    <button type="submit">REGISTRARME</button>
+
+                    <p id="mensajeRegistro" class="mensaje"></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <section id="usuarios" class="seccion">
+
+            <h2>Tipos de usuario</h2>
+
+            <div class="tarjetas">
+
+                <article class="tarjeta">
+                    <div class="icono-tarjeta">🏘️</div>
+                    <h3>COPACI</h3>
+                    <p>Supervisa y da seguimiento a las solicitudes y reportes comunitarios.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="icono-tarjeta">⚙️</div>
+                    <h3>Administrador</h3>
+                    <p>Gestiona usuarios, constancias y reportes del sistema.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="icono-tarjeta">👤</div>
+                    <h3>Ciudadano</h3>
+                    <p>Solicita constancias y realiza reportes de servicios públicos.</p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <aside class="aside">
+
+            <h2>¿Cómo utilizar el sistema?</h2>
+
+            <ol>
+                <li>Registra tus datos si eres un ciudadano nuevo.</li>
+                <li>Selecciona tu tipo de usuario.</li>
+                <li>Ingresa tu correo y contraseña.</li>
+                <li>Accede al panel correspondiente.</li>
+            </ol>
+
+        </aside>
+
+    </main>
+
+    <footer id="contacto" class="footer">
+        <h3>Sistema de Gestión Ciudadana</h3>
+        <p>COPACI de Granjas Guadalupe</p>
+        <p>Atención y seguimiento de servicios comunitarios.</p>
+    </footer>
+
+</body>
+</html>

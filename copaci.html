@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Panel COPACI - Sistema de Gestión Ciudadana</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="comun.js" defer></script>
+    <script src="ciudadano.js" defer></script>
+    <script src="copaci.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- Encabezado del panel COPACI -->
+    <header class="encabezado">
+
+        <div class="logo-header">
+            <img src="logo.png" alt="Logo del Sistema de Gestión Ciudadana">
+        </div>
+
+        <div class="titulo-header">
+            <h1>PANEL COPACI</h1>
+            <p>Sistema de Gestión Ciudadana - Granjas Guadalupe</p>
+        </div>
+
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav class="navegacion">
+
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#reportes">Reportes</a></li>
+            <li><a href="#seguimiento">Seguimiento</a></li>
+            <li><a href="#estadisticas">Estadísticas</a></li>
+            <li><a href="#avisos">Avisos</a></li>
+        </ul>
+
+    </nav>
+
+    <main>
+
+        <!-- Bienvenida -->
+        <section class="seccion inicio">
+
+            <h2>Bienvenido al panel COPACI</h2>
+
+            <p class="descripcion">
+                Desde este panel puedes consultar reportes,
+                revisar solicitudes y dar seguimiento a las
+                situaciones de la comunidad.
+            </p>
+
+            <button type="button" id="cerrarSesion">
+                CERRAR SESIÓN
+            </button>
+
+        </section>
+
+        <!-- Funciones principales -->
+        <section id="reportes" class="seccion">
+
+            <h2>Funciones principales</h2>
+
+            <div class="tarjetas">
+
+                <article class="tarjeta">
+
+                    <div class="icono-tarjeta">📋</div>
+
+                    <h3>Reportes ciudadanos</h3>
+
+                    <p>
+                        Consulta los reportes de luminarias
+                        y bacheo realizados por los ciudadanos.
+                    </p>
+
+                    <a href="#tablaReportesCopaci" class="boton-accion">
+                        Consultar reportes
+                    </a>
+
+                </article>
+
+                <article class="tarjeta">
+
+                    <div class="icono-tarjeta">📊</div>
+
+                    <h3>Estadísticas</h3>
+
+                    <p>
+                        Consulta información general sobre
+                        los reportes registrados.
+                    </p>
+
+                    <a href="#estadisticas" class="boton-accion">
+                        Ver estadísticas
+                    </a>
+
+                </article>
+
+                <article class="tarjeta">
+
+                    <div class="icono-tarjeta">📅</div>
+
+                    <h3>Seguimiento</h3>
+
+                    <p>
+                        Revisa el estado de los trámites
+                        y reportes comunitarios.
+                    </p>
+
+                    <a href="#seguimiento" class="boton-accion">
+                        Consultar seguimiento
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Consulta de reportes -->
+        <section class="seccion">
+
+            <h2>Reportes ciudadanos</h2>
+
+            <div id="tablaReportesCopaci">
+                <p>No hay reportes registrados.</p>
+            </div>
+
+        </section>
+
+        <!-- Seguimiento -->
+        <section id="seguimiento" class="seccion">
+
+            <h2>Seguimiento ciudadano</h2>
+
+            <div id="tablaSeguimientoCopaci">
+                <p>No hay solicitudes registradas.</p>
+            </div>
+
+        </section>
+
+        <!-- Estadísticas -->
+        <section id="estadisticas" class="seccion">
+
+            <h2>Estadísticas comunitarias</h2>
+
+            <div class="tarjetas">
+
+                <article class="tarjeta">
+                    <h3>Total de reportes</h3>
+                    <p id="totalReportes">0</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Reportes pendientes</h3>
+                    <p id="reportesPendientes">0</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Reportes atendidos</h3>
+                    <p id="reportesAtendidos">0</p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Avisos comunitarios -->
+        <section id="avisos" class="seccion">
+
+            <div class="login-card">
+
+                <h2>PUBLICAR AVISO</h2>
+
+                <p>Comparte información con los ciudadanos.</p>
+
+                <form id="avisoForm">
+
+                    <label for="tituloAviso">Título del aviso:</label>
+
+                    <input type="text" id="tituloAviso"
+                        placeholder="Título del comunicado" required>
+
+                    <label for="descripcionAviso">
+                        Descripción:
+                    </label>
+
+                    <textarea id="descripcionAviso"
+                        placeholder="Escribe el aviso comunitario"
+                        rows="4" required></textarea>
+
+                    <button type="submit">
+                        PUBLICAR AVISO
+                    </button>
+
+                </form>
+
+            </div>
+
+            <h2>Avisos publicados</h2>
+
+            <div id="listaAvisosCopaci">
+                <p>No hay avisos publicados.</p>
+            </div>
+
+        </section>
+
+        <!-- Información complementaria -->
+        <aside class="aside">
+
+            <h2>Funciones del perfil COPACI</h2>
+
+            <ol>
+                <li>Consultar reportes ciudadanos.</li>
+                <li>Revisar solicitudes de constancias.</li>
+                <li>Dar seguimiento a los reportes.</li>
+                <li>Consultar estadísticas.</li>
+                <li>Publicar avisos comunitarios.</li>
+            </ol>
+
+        </aside>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+
+        <h3>Panel COPACI</h3>
+
+        <p>Sistema de Gestión Ciudadana</p>
+
+        <p>COPACI de Granjas Guadalupe</p>
+
+    </footer>
+
+</body>
+</html>

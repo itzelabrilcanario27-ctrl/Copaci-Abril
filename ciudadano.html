@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ciudadano - Sistema de Gestión Ciudadana</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="comun.js" defer></script>
+    <script src="ciudadano.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- Encabezado del ciudadano -->
+    <header class="encabezado">
+
+        <div class="logo-header">
+            <img src="logo.png" alt="Logo del sistema">
+        </div>
+
+        <div class="titulo-header">
+            <h1>PANEL CIUDADANO</h1>
+            <p>Sistema de Gestión Ciudadana</p>
+        </div>
+
+    </header>
+
+    <!-- Menú del ciudadano -->
+    <nav class="navegacion">
+
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#constancias">Constancias</a></li>
+            <li><a href="#reportes">Reportes</a></li>
+            <li><a href="#misReportes">Mis solicitudes</a></li>
+            <li><a href="#avisos">Avisos</a></li>
+        </ul>
+
+    </nav>
+
+    <main>
+
+        <!-- Bienvenida -->
+        <section class="seccion inicio">
+
+            <h2 id="bienvenidaCiudadano">Bienvenido, Ciudadano</h2>
+
+            <p class="descripcion">
+                Desde este panel puedes solicitar constancias
+                y realizar reportes de tu comunidad.
+            </p>
+
+            <button type="button" id="cerrarSesion">
+                CERRAR SESIÓN
+            </button>
+
+        </section>
+
+        <!-- Funciones del ciudadano -->
+        <section id="reportes" class="seccion">
+
+            <h2>Mis funciones</h2>
+
+            <div class="tarjetas">
+
+                <article class="tarjeta">
+
+                    <div class="icono-tarjeta">📄</div>
+                    <h3>Constancias</h3>
+
+                    <p>Solicita una constancia de residencia.</p>
+
+                    <a href="#constancias" class="boton-accion">
+                        Solicitar
+                    </a>
+
+                </article>
+
+                <article class="tarjeta">
+
+                    <div class="icono-tarjeta">💡</div>
+                    <h3>Luminarias</h3>
+
+                    <p>Reporta fallas en el alumbrado público.</p>
+
+                    <a href="#formularioLuminaria" class="boton-accion">
+                        Crear reporte
+                    </a>
+
+                </article>
+
+                <article class="tarjeta">
+
+                    <div class="icono-tarjeta">🚧</div>
+                    <h3>Bacheo</h3>
+
+                    <p>Reporta baches y daños en las calles.</p>
+
+                    <a href="#formularioBacheo" class="boton-accion">
+                        Crear reporte
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Solicitud de constancias -->
+        <section id="constancias" class="seccion">
+
+            <div class="login-card">
+
+                <h2>SOLICITUD DE CONSTANCIA</h2>
+
+                <p>Completa los datos para solicitar tu documento.</p>
+
+                <form id="constanciaForm">
+
+                    <label for="tipoConstancia">Tipo de constancia:</label>
+
+                    <select id="tipoConstancia" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="Constancia de residencia">
+                            Constancia de residencia
+                        </option>
+                    </select>
+
+                    <label for="observacionesConstancia">
+                        Observaciones:
+                    </label>
+
+                    <textarea id="observacionesConstancia"
+                        placeholder="Información adicional"
+                        rows="3"></textarea>
+
+                    <button type="submit">
+                        SOLICITAR CONSTANCIA
+                    </button>
+
+                </form>
+
+                <div id="comprobanteConstancia"></div>
+
+            </div>
+
+        </section>
+
+        <!-- Reporte de luminarias -->
+        <section id="formularioLuminaria" class="seccion">
+
+            <div class="login-card">
+
+                <h2>REPORTE DE LUMINARIAS</h2>
+
+                <p>Registra una falla en el alumbrado público.</p>
+
+                <form id="reporteLuminariaForm">
+
+                    <label for="ubicacionLuminaria">
+                        Ubicación o calle:
+                    </label>
+
+                    <input type="text" id="ubicacionLuminaria"
+                        placeholder="Nombre de la calle" required>
+
+                    <label for="entreCalles">
+                        ¿Entre qué calles se encuentra?
+                    </label>
+
+                    <input type="text" id="entreCalles"
+                        placeholder="Calles cercanas" required>
+
+                    <label for="descripcionLuminaria">
+                        Descripción de la falla:
+                    </label>
+
+                    <textarea id="descripcionLuminaria"
+                        placeholder="Describe el problema"
+                        rows="3" required></textarea>
+
+                    <button type="submit">
+                        ENVIAR REPORTE
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <!-- Reporte de bacheo -->
+        <section id="formularioBacheo" class="seccion">
+
+            <div class="login-card">
+
+                <h2>REPORTE DE BACHEO</h2>
+
+                <p>Registra los daños en la carpeta asfáltica.</p>
+
+                <form id="reporteBacheoForm">
+
+                    <label for="ubicacionBache">
+                        Ubicación o dirección:
+                    </label>
+
+                    <input type="text" id="ubicacionBache"
+                        placeholder="Nombre de la calle" required>
+
+                    <label for="gravedadBache">
+                        Nivel de gravedad:
+                    </label>
+
+                    <select id="gravedadBache" required>
+                        <option value="">Selecciona la gravedad</option>
+                        <option value="Bajo">Bajo</option>
+                        <option value="Medio">Medio</option>
+                        <option value="Alto">Alto</option>
+                    </select>
+
+                    <label for="descripcionBache">
+                        Descripción del problema:
+                    </label>
+
+                    <textarea id="descripcionBache"
+                        placeholder="Describe los daños"
+                        rows="3" required></textarea>
+
+                    <button type="submit">
+                        ENVIAR REPORTE
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <!-- Mis solicitudes -->
+        <section id="misReportes" class="seccion">
+
+            <h2>Mis solicitudes y reportes</h2>
+
+            <div id="listaMisReportes">
+                <p>Aún no tienes solicitudes registradas.</p>
+            </div>
+
+        </section>
+
+        <!-- Avisos -->
+        <section id="avisos" class="seccion">
+
+            <h2>Avisos comunitarios</h2>
+
+            <div id="listaAvisos">
+                <p>No hay avisos publicados.</p>
+            </div>
+
+        </section>
+
+        <!-- Información adicional -->
+        <aside class="aside">
+
+            <h2>¿Cómo realizar una solicitud?</h2>
+
+            <ol>
+                <li>Selecciona el trámite o reporte.</li>
+                <li>Completa los datos solicitados.</li>
+                <li>Envía tu solicitud.</li>
+                <li>Consulta su estatus en Mis solicitudes.</li>
+            </ol>
+
+        </aside>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+
+        <h3>Sistema de Gestión Ciudadana</h3>
+
+        <p>COPACI de Granjas Guadalupe</p>
+
+    </footer>
+
+</body>
+</html>
